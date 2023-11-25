@@ -1,2 +1,4 @@
-year,km_driven,mileage,engine,max_power,torque,max_torque_rpm,fuel_Diesel,fuel_LPG,fuel_Petrol,seller_type_Individual,seller_type_Trustmark Dealer,transmission_Manual,owner_Fourth & Above Owner,owner_Second Owner,owner_Test Drive Car,owner_Third Owner,seats_4,seats_5,seats_6,seats_7,seats_8,seats_9,seats_10,seats_14,year_squared,torque_log,engine_log,predicted_price
-2016,75000,23.01,999.0,67.0,91.0,4250.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,4064256,4.51085950651685,6.906754778648554,572821.5440254211
+name,year,selling_price,km_driven,fuel,seller_type,transmission,owner,mileage,engine,max_power,torque,seats,max_torque_rpm,predicted_price
+Skoda,2016,1200000,75000,Petrol,Individual,Automatic,First Owner,23.01,999.0,67.0,91.0,5.0,4250.0,572821.5440261364
+Audi,2019,1200000,75000,Petrol,Individual,Automatic,First Owner,13.0,2000.0,241.0,370.0,5.0,4500.0,2380807.8340649605
+Ford,2014,2400000,98258,Petrol,Individual,Automatic,First Owner,12.5,3496.0,290.0,345.0,7.0,4000.0,2971084.9042949677

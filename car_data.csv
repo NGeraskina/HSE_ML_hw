@@ -1,0 +1,4 @@
+name,year,selling_price,km_driven,fuel,seller_type,transmission,owner,mileage,engine,max_power,torque,seats
+Skoda,2016,1200000,75000,Petrol,Individual,Automatic,First Owner,23.01 kmpl,999 CC,67 bhp,91Nm@ 4250rpm,5
+Audi,2019,1200000,75000,Petrol,Individual,Automatic,First Owner,13 kmpl,2000 CC,241 bhp,370Nm@ 4500rpm,5
+Ford,2014,2400000,98258,Petrol,Individual,Automatic,First Owner,12.5 kmpl,3496 CC,290 bhp,345Nm@ 4000rpm,7

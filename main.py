@@ -174,9 +174,10 @@ def predict_items(items: List[Item]):
     for i in items:
         l.append(dict(i))
     df = pd.DataFrame.from_records(l)
-    df = prepare_data(df)
-    pred = predict(df)
+    df_new = prepare_data(df)
+    pred = predict(df_new)
     df['predicted_price'] = pred
+    print(df)
     output_file = BytesIO()
     df.to_csv('./predicted_costs.csv', index=False)
     df.to_csv(output_file, index=False)
