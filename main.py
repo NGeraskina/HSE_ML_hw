@@ -149,6 +149,7 @@ def prepare_data(X, type='item'):
 
     X = X.drop(columns=['fuel', 'seller_type', 'transmission', 'owner', 'seats'])
     X['year_squared'] = X['year'] ** 2
+    X['km_driven_squared'] = X['km_driven'] ** 2
     X['torque_log'] = np.log(X['torque'])
     X['engine_log'] = np.log(X['engine'])
 
