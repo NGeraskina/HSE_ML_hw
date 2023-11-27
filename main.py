@@ -123,7 +123,7 @@ def max_torque(x):
         return x
 
 
-def prepare_data(X, type='item'):
+def prepare_data(X):
     dict_of_medians, scaler, encoder, _ = joblib.load(r'./ridge_model.pickle')
 
     X['max_torque_rpm'] = X['torque'].apply(max_torque)
@@ -133,6 +133,8 @@ def prepare_data(X, type='item'):
 
     for i in ['mileage', 'engine', 'max_power', 'torque', 'seats', 'max_torque_rpm']:
         X[i] = X[i].fillna(dict_of_medians[i])
+    X.seats = X.seats.astype(int)
+    X.engine = X.engine.astype(int)
 
     num_cols = [i for i in X.columns if
                 i not in ['selling_price', 'name', 'fuel', 'seller_type', 'transmission', 'owner']]
@@ -164,21 +166,18 @@ def predict(X):
 @app.post("/predict_item")
 def predict_item(item: Item):
     item = pd.DataFrame(item.dict(), index=[0])
-    item = prepare_data(item, 'item')
+    item = prepare_data(item)
     pred = predict(item)[0]
     return JSONResponse(content={"predicted_cost": pred})
 
 
 @app.post("/predict_items")
 def predict_items(items: List[Item]):
-    l = []
-    for i in items:
-        l.append(dict(i))
+    l = [dict(i) for i in items]
     df = pd.DataFrame.from_records(l)
     df_new = prepare_data(df)
     pred = predict(df_new)
     df['predicted_price'] = pred
-    print(df)
     output_file = BytesIO()
     df.to_csv('./predicted_costs.csv', index=False)
     df.to_csv(output_file, index=False)

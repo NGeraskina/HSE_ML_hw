@@ -1,4 +1,4 @@
 name,year,selling_price,km_driven,fuel,seller_type,transmission,owner,mileage,engine,max_power,torque,seats,max_torque_rpm,predicted_price
-Skoda,2016,1200000,75000,Petrol,Individual,Automatic,First Owner,23.01,999.0,67.0,91.0,5.0,4250.0,549750.1868200302
-Audi,2019,1200000,75000,Petrol,Individual,Automatic,First Owner,13.0,2000.0,241.0,370.0,5.0,4500.0,2346328.533327818
-Ford,2014,2400000,98258,Petrol,Individual,Automatic,First Owner,12.5,3496.0,290.0,345.0,7.0,4000.0,2949155.5591745377
+Skoda,2016,1200000,75000,Petrol,Individual,Automatic,First Owner,23.01,999,67.0,91.0,5,4250.0,558342.9079397619
+Audi,2019,1200000,75000,Petrol,Individual,Automatic,First Owner,13.0,2000,241.0,370.0,5,4500.0,2341830.3427684903
+Ford,2014,2400000,98258,Petrol,Individual,Automatic,First Owner,12.5,3496,290.0,345.0,7,4000.0,2828803.264069319
